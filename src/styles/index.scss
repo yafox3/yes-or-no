@@ -1,4 +1,4 @@
-@import url(./reset.css);
+@import url(./reset.scss);
 
 @import url(https://fonts.googleapis.com/css?family=Poppins:regular,700);
 @import url(https://fonts.googleapis.com/css?family=Rampart+One:regular);
@@ -7,3 +7,11 @@ body {
 	font-family: Poppins;
 	background: linear-gradient(90deg, #7785ff 0.42%, #b53dff 100%);
 }
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
