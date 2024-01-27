@@ -2,10 +2,12 @@
   "name": "yes-or-no",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "default": "src/index.html",
+  "source": "src/index.html",
   "scripts": {
-    "cleanup": "rmdir /q /s .parcel-cache dist",
-    "start": "npm run cleanup && parcel ./src/index.html -p 8080"
+    "cleanup": "rmdir /q /s .parcel-cache .cache dist",
+    "start": "parcel ./src/index.html -p 8080",
+    "build": "parcel build ./src/index.html"
   },
   "keywords": [],
   "author": "yafox3",
@@ -13,6 +15,7 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.11.0",
     "parcel": "^2.11.0",
+    "parcel-bundler": "^1.12.5",
     "parcel-cli": "^1.1.0"
   }
 }
