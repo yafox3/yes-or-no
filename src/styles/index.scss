@@ -14,7 +14,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	overflow: hidden;
+	// overflow: hidden;
 	padding: 1.5rem;
 }
 
@@ -28,8 +28,10 @@ body {
 
 // yes-no----------------------------------------------------------------
 .yes-no {
-	// .yes-no__container
+	margin-top: 10vh;	
 
+
+	// .yes-no__container
 	&__container {
 		display: flex;
 		flex-direction: column;
@@ -41,16 +43,23 @@ body {
 
 	&__title {
 		font-family: 'Rampart One';
+		text-align: center;
 		color: #fff;
-		font-size: 96px;
+		font-size: 6rem;
 		text-shadow: 10px 10px 8px rgba(0, 0, 0, 0.25);
 		margin-bottom: 4rem;
 
-		&>span:nth-child(1) {
+		& > span:nth-child(1) {
 			color: rgb(116, 255, 116);
 		}
-		&>span:nth-child(2) {
+		& > span:nth-child(2) {
 			color: rgb(255, 34, 34);
+		}
+
+		@media (max-width: 767.99px) {
+			& {
+				font-size: 5rem;
+			}
 		}
 	}
 
@@ -65,7 +74,51 @@ body {
 	&__check {
 	}
 }
-.input {
-}
-.btn {
+
+.modal {
+	// .modal__overlay
+	&__overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #000000e7;
+
+		opacity: 0;
+		z-index: -99;
+
+		transition: all .4s ease;
+	}
+
+	&.active &__overlay {
+		opacity: 1;
+		z-index: 99;
+	}
+
+	// .modal__content
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		min-width: 500px;
+		height: 600px;
+		padding: 5rem;
+		border-radius: 15px;
+
+		color: #fff;
+		text-align: center;
+		font-size: 9rem;
+		
+		text-transform: capitalize;
+		
+		@media (max-width: 767.99px) {
+			& {
+				font-size: 5rem;
+			}
+		}
+	}
 }
