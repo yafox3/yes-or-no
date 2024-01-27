@@ -1,0 +1,17 @@
+{
+  "name": "yes-or-no",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "parcel ./src/index.html -p 8080"
+  },
+  "keywords": [],
+  "author": "yafox3",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "parcel-cli": "^1.1.0"
+  }
+}
