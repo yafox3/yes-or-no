@@ -1,10 +1,12 @@
-@import url(./reset.scss);
+@import './reset';
+@import './components';
 
 @import url(https://fonts.googleapis.com/css?family=Poppins:regular,700);
 @import url(https://fonts.googleapis.com/css?family=Rampart+One:regular);
 
 body {
 	font-family: Poppins;
+	color: #333;
 	background: linear-gradient(90deg, #7785ff 0.42%, #b53dff 100%);
 }
 
@@ -13,5 +15,57 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 	overflow: hidden;
+	padding: 1.5rem;
 }
 
+.main {
+	flex: 1 0 100%;
+}
+
+.footer {
+	text-align: center;
+}
+
+// yes-no----------------------------------------------------------------
+.yes-no {
+	// .yes-no__container
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		max-width: 560px;
+		margin: 0 auto;
+	}
+
+	// .yes-no__title
+
+	&__title {
+		font-family: 'Rampart One';
+		color: #fff;
+		font-size: 96px;
+		text-shadow: 10px 10px 8px rgba(0, 0, 0, 0.25);
+		margin-bottom: 4rem;
+
+		&>span:nth-child(1) {
+			color: rgb(116, 255, 116);
+		}
+		&>span:nth-child(2) {
+			color: rgb(255, 34, 34);
+		}
+	}
+
+	// .yes-no__input
+
+	&__input {
+		margin-bottom: 4rem;
+	}
+
+	// .yes-no__check
+
+	&__check {
+	}
+}
+.input {
+}
+.btn {
+}

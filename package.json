@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "dev": "parcel ./src/index.html -p 8080"
+    "cleanup": "rmdir /q /s .parcel-cache dist",
+    "start": "npm run cleanup && parcel ./src/index.html -p 8080"
   },
   "keywords": [],
   "author": "yafox3",
